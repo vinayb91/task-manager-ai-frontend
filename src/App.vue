@@ -1,4 +1,3 @@
-<!-- App.vue - Main Vue Component -->
 <template>
   <div class="flex h-screen bg-gray-50">
     <TaskSidebar
@@ -102,7 +101,3 @@ onMounted(() => {
   fetchTasks();
 });
 </script>
-
-<style scoped>
-/* Add any additional custom styles here */
-</style>

@@ -1,5 +1,4 @@
 <template>
-  <!-- Mobile Overlay -->
   <div
     v-if="isOpen"
     @click="$emit('close')"
