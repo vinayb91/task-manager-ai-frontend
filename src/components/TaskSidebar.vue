@@ -89,7 +89,7 @@
     </div>
 
     <div class="p-4 border-t bg-gray-50">
-      <p class="text-xs text-center text-gray-500">created by Vinay B</p>
+      <p class="text-xs text-center text-gray-500">created by B Vinay</p>
     </div>
   </div>
 </template>
