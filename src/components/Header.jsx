@@ -67,7 +67,7 @@ const Header = ({
               />
             </button>
 
-            <button
+            {/* <button
               onClick={toggleSpeech}
               className={`p-2 rounded-md transition ${
                 speechEnabled
@@ -91,7 +91,7 @@ const Header = ({
               >
                 <X className="w-5 h-5" />
               </button>
-            )}
+            )} */}
 
             {/* Admin Button */}
             {user?.is_admin && (

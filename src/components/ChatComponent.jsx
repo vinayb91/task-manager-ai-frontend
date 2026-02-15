@@ -16,50 +16,7 @@ const ChatComponent = ({
 }) => {
   return (
     <div className="lg:col-span-2 flex flex-col gap-4 h-full min-h-0">
-      {/* Controls */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Bot className="w-5 h-5 text-blue-600" />
-            <span className="font-medium text-gray-700">AI Assistant</span>
-          </div>
-          <div className="flex items-center gap-3">
-            {isListening && (
-              <span className="text-xs font-medium text-red-600 animate-pulse">
-                Listening...
-              </span>
-            )}
-            {isSpeaking && (
-              <span className="text-xs font-medium text-green-600 animate-pulse">
-                Speaking...
-              </span>
-            )}
-            <button
-              onClick={toggleVoiceInput}
-              disabled={loading}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition ${
-                isListening
-                  ? "bg-red-100 text-red-700 hover:bg-red-200"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              {isListening ? (
-                <>
-                  <MicOff className="w-4 h-4" />
-                  Stop
-                </>
-              ) : (
-                <>
-                  <Mic className="w-4 h-4" />
-                  Voice
-                </>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Chat Area */}
+      {/* voice control pending...*/}
       <div className="flex-1 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col">
         <div className="px-4 py-3 border-b border-gray-200">
           <h3 className="font-semibold text-gray-900">Conversation</h3>
