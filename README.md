@@ -279,10 +279,6 @@ className = "transition-all duration-300";
 - Optimized re-renders with React hooks
 - Lazy loading for images (if added)
 
-## License
-
-MIT
-
 ## Contributing
 
 1. Fork the repository
