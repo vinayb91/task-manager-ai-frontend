@@ -94,7 +94,16 @@ const TaskComponent = ({ tasks, filterStatus, setFilterStatus }) => {
                     {task.due_date && (
                       <>
                         <span className="text-gray-300">•</span>
-                        <span className="text-gray-500">{task.due_date}</span>
+                        <span className="text-gray-500">
+                          {new Date(task.due_date).toLocaleDateString(
+                            undefined,
+                            {
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric",
+                            },
+                          )}
+                        </span>
                       </>
                     )}
                     <span className="text-gray-300">•</span>
