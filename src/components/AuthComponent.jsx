@@ -1,5 +1,5 @@
-import React from 'react';
-import { User, Mail, Lock, Loader2 } from 'lucide-react';
+import React from "react";
+import { User, Mail, Lock, Loader2 } from "lucide-react";
 
 const AuthComponent = ({
   authMode,
@@ -16,7 +16,7 @@ const AuthComponent = ({
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            TaskFlow AI
+            AI Task Manager
           </h1>
           <p className="text-gray-600">Manage tasks with AI assistance</p>
         </div>
@@ -25,21 +25,21 @@ const AuthComponent = ({
           {/* Tabs */}
           <div className="flex gap-2 mb-6">
             <button
-              onClick={() => setAuthMode('login')}
+              onClick={() => setAuthMode("login")}
               className={`flex-1 py-2 px-4 rounded-md font-medium transition ${
-                authMode === 'login'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                authMode === "login"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
               Login
             </button>
             <button
-              onClick={() => setAuthMode('register')}
+              onClick={() => setAuthMode("register")}
               className={`flex-1 py-2 px-4 rounded-md font-medium transition ${
-                authMode === 'register'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                authMode === "register"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
               Register
@@ -48,7 +48,7 @@ const AuthComponent = ({
 
           {/* Form */}
           <div className="space-y-4">
-            {authMode === 'register' && (
+            {authMode === "register" && (
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Name
@@ -124,10 +124,10 @@ const AuthComponent = ({
                   <Loader2 className="w-5 h-5 animate-spin" />
                   Processing...
                 </span>
-              ) : authMode === 'login' ? (
-                'Login'
+              ) : authMode === "login" ? (
+                "Login"
               ) : (
-                'Register'
+                "Register"
               )}
             </button>
           </div>
