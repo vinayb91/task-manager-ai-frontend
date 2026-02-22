@@ -33,6 +33,9 @@ export const useAppLogic = () => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [speechEnabled, setSpeechEnabled] = useState(true);
 
+  // UI state
+  const [isTaskVisible, setIsTaskVisible] = useState(false);
+
   // Refs
   const messagesContainerRef = useRef(null);
   const recognitionRef = useRef(null);
@@ -292,6 +295,8 @@ export const useAppLogic = () => {
     isSpeaking,
     speechEnabled,
     messagesContainerRef,
+    isTaskVisible,
+    setIsTaskVisible,
     handleAuth,
     logout,
     fetchTasks,

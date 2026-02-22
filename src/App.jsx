@@ -30,6 +30,8 @@ function App() {
     isSpeaking,
     speechEnabled,
     messagesContainerRef,
+    isTaskVisible,
+    setIsTaskVisible,
     handleAuth,
     logout,
     fetchTasks,
@@ -81,28 +83,38 @@ function App() {
         stopSpeaking={stopSpeaking}
         setShowAdmin={setShowAdmin}
         logout={logout}
+        isTaskVisible={isTaskVisible}
+        setIsTaskVisible={setIsTaskVisible}
       />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col max-w-7xl mx-auto w-full px-4 py-6 min-h-0">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-full min-h-0">
-          <ChatComponent
-            messages={messages}
-            loading={loading}
-            input={input}
-            setInput={setInput}
-            handleKeyPress={handleKeyPress}
-            sendMessage={sendMessage}
-            messagesContainerRef={messagesContainerRef}
-            toggleVoiceInput={toggleVoiceInput}
-            isListening={isListening}
-            isSpeaking={isSpeaking}
-          />
-          <TaskComponent
-            tasks={tasks}
-            filterStatus={filterStatus}
-            setFilterStatus={setFilterStatus}
-          />
+          <div
+            className={`lg:col-span-2 lg:block ${
+              isTaskVisible ? "hidden" : "block"
+            }`}
+          >
+            <ChatComponent
+              messages={messages}
+              loading={loading}
+              input={input}
+              setInput={setInput}
+              handleKeyPress={handleKeyPress}
+              sendMessage={sendMessage}
+              messagesContainerRef={messagesContainerRef}
+              toggleVoiceInput={toggleVoiceInput}
+              isListening={isListening}
+              isSpeaking={isSpeaking}
+            />
+          </div>
+          <div className={`lg:block ${isTaskVisible ? "block" : "hidden"}`}>
+            <TaskComponent
+              tasks={tasks}
+              filterStatus={filterStatus}
+              setFilterStatus={setFilterStatus}
+            />
+          </div>
         </div>
       </div>
     </div>

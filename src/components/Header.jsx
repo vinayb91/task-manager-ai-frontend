@@ -8,6 +8,7 @@ import {
   VolumeX,
   X,
   Settings,
+  Menu,
 } from "lucide-react";
 
 const title = import.meta.env.VITE_APP_TITLE || "AI Task Manager";
@@ -24,6 +25,8 @@ const Header = ({
   stopSpeaking,
   setShowAdmin,
   logout,
+  isTaskVisible,
+  setIsTaskVisible,
 }) => {
   return (
     <header className="bg-white border-b border-gray-200">
@@ -111,6 +114,17 @@ const Header = ({
             >
               <LogOut className="w-5 h-5" />
             </button>
+
+            {/* Hamburger Menu - Mobile */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsTaskVisible(!isTaskVisible)}
+                className="p-2 text-gray-600 hover:bg-gray-100 rounded-md transition"
+                title="Toggle Tasks"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
